@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Add custom color to Tailwind
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            petronas: '#00D2BE',
+            dark: '#0f0f0f',
+            light: '#f1f1f1'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes scrollX {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+        }
+
+        .animate-scroll {
+        animation: scrollX 25s linear infinite;
+        }
+
+        .skill-item {
+        display: inline-block;
+        background-color: #1f2937; /* bg-gray-800 */
+        border: 1px solid #00D2BE; /* border-petronas */
+        color: #f1f1f1; /* text-light */
+        padding-left: 1.5rem; /* px-6 */
+        padding-right: 1.5rem;
+        padding-top: 0.75rem; /* py-3 */
+        padding-bottom: 0.75rem;
+        border-radius: 0.5rem; /* rounded-lg */
+        font-size: 0.875rem; /* text-sm */
+        font-weight: 500; /* font-medium */
+        transition: all 0.2s;
+        transform: scale(1);
+        }
+        .skill-item:hover {
+        background-color: #00D2BE; /* hover:bg-petronas */
+        color: #0f0f0f; /* hover:text-dark */
+        transform: scale(1.10); /* hover:scale-110 */
+        }
+        .contact-link {
+         color: inherit;
+         text-decoration: none;
+         transition: color 0.3s, text-decoration 0.3s;
+        }
+        .contact-link:hover {
+         color: #00D2BE; /* petronas */
+         text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light font-sans">
+
+  <!-- Hero -->
+  <section class="py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-petronas">Hi, I'm Tristan Nafi Agung Kurniawan</h1>
+    <p class="mt-4 text-lg text-gray-300">Data Science Anthusiast | Software Developer | Computer Science Student</p>
+  </section>
+   
+
+  <!-- About -->
+  <!-- About Me Section -->
+<section class="flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-20 py-20">
+  <!-- Image Container -->
+  <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg mb-8 md:mb-0">
+    <img src="photo/IMG-20240616-WA0016.jpg" alt="Your photo" class="w-full h-full object-cover grayscale" />
+  </div>
+
+  <!-- Text Content -->
+  <div class="max-w-xl text-center md:text-left">
+    <h2 class="text-3xl font-bold text-[#4F46E5] mb-4">| About Me</h2>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">
+      Hi! I'm Tristan, an undergraduate student with passion for Data Science, Machine Learning, and Web Development (though I'm still learning in 3 of those aspect).
+      I love to explore and learn more about software engineering while also continuing to pursue my passion in Data Science. And I also love to design and photography.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-4">
+      In the past 2 years since I started my journey in software development and data science, I've worked on several project including data visualization projects using dashboard such as 
+      <a href="#" class="text-indigo-500 hover:underline">Streamlit</a>. In web development, I am currently focusing to learn in <a href="#" class="text-blue-500 hover:underline">React</a>, while also focusing to improve with modern framework such as <a href="#" class="text-cyan-500 hover:underline">Tailwind CSS</a>, 
+      and <a href="#" class="text-purple-500 hover:underline">Bootstrap</a>.
+    </p>
+    <p class="text-gray-700 dark:text-gray-300 mb-6">
+      Usually, I spend my time learning new things, gaming and photo editing. I have a strong passion in photography and has become my hobby ever since I was a child.
+    </p>
+
+    <!-- CV Download Button -->
+    <a 
+      href="https://drive.google.com/file/d/1TjFEqSgNXOVAE3tiFZEnkLzRI8UhPOJq/view?usp=sharing"
+      target="_blank"
+      class="inline-block border border-indigo-500 text-indigo-500 px-6 py-2 rounded-full hover:bg-indigo-500 hover:text-white transition"
+    >
+      CV Download
+    </a>
+  </div>
+</section>
+
+
+
+ <!-- Skills Section -->
+<section class="py-16 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-petronas mb-12 text-center">Skills</h2>
+
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      
+      <!-- Scrolling Skill Badges -->
+      <div class="relative flex-1 overflow-hidden">
+        <div class="flex animate-scroll gap-6 whitespace-nowrap">
+          <!-- add more badges as needed -->
+          <span class="skill-item">HTML &amp; CSS</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">Tailwind CSS</span>
+          <span class="skill-item">React</span>
+          <span class="skill-item">Python</span>
+          <span class="skill-item">Git &amp; GitHub</span>
+          <span class="skill-item">Pandas</span>
+          <span class="skill-item">Figma</span>
+          <span class="skill-item">Bootstrap</span>
+          <span class="skill-item">mySQL</span>
+          <!-- repeat for seamless loop -->
+          <span class="skill-item">HTML &amp; CSS</span>
+          <span class="skill-item">JavaScript</span>
+          <span class="skill-item">Tailwind CSS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects -->
+  <!-- Projects Section -->
+<section class="py-16 px-4 bg-gray-800">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-petronas mb-10 text-center">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Project Card -->
+      <div class="bg-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+        <img src="photo/Screenshot_20-6-2025_82623_127.0.0.1.jpeg" alt="Project 1" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-petronas">AI Food Recognition</h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            This project uses Computer Vision to recognize food items from uploaded images. It utilizes 3 different models such as YOLOv8, ResNet-18, and Vision Transformer where the user can select which one they want to use. After that we display the nutritional value of the food.
+          </p>
+          <a href="https://github.com/Trid3nz/Food-Recognition" class="inline-block mt-4 text-petronas hover:underline text-sm">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 group">
+        <img src="photo/image.png" alt="Project 2" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-petronas">Motion Up</h3>
+          <p class="mt-2 text-gray-300 text-sm">
+            Motion Up is an app concept that helps user to exercise and track their progress. It provides a user-friendly step by step guide depending on their preference, and also provides a progress tracker to help user to track their progress.
+          </p>
+          <a href="https://www.figma.com/design/wjj4Xao5zQO6FxbxfB5osy/Motion-Up?node-id=0-1&t=ElkPAzEiRq92ThtM-1" class="inline-block mt-4 text-petronas hover:underline text-sm">View Project →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <!-- Contact Section -->
+<section class="py-16 bg-dark text-center">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-petronas mb-6">Get in Touch</h2>
+    <p class="text-gray-300 mb-8">
+      Feel free to reach out through any of the platforms below.
+    </p>
+
+    <div class="flex justify-center gap-6 text-light text-lg">
+      <!-- Email -->
+      <a href="mailto:your.email@example.com" class="contact-link">Email</a>
+
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">LinkedIn</a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/yourusername" target="_blank" class="contact-link">GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500 bg-dark">
+    © 2025 Your Name. All rights reserved.
+  </footer>
+
+</body>
+</html>
